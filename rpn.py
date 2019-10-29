@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 def calculate(arg):
-	stack = list()
-        for token in arg.split() :
+        stack = list()
+        for token in arg.split():
                 print(token)
-                if token == '+'
+                if token == '+':
                     arg1 = stack.pop()
                     arg2 = stack.pop()
                     result = arg1 + arg2
                     stack.append(result)
+                elif token == '-':
+                    arg2 = stack.pop()
+                    arg1 = stack.pop()
+                    result = arg1 - arg2
+                    stack.append(result)
                 else:
                     stack.append(int(token))
                 print(stack)
-            return stack.pop()
+        return stack.pop()
 def main():
 	while True:
 		calculate(input('rpn calc> '))
