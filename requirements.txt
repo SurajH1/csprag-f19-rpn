@@ -1,3 +1,4 @@
 coverage==4.5.4
 pygobject==3.26.1
 pyxdg==0.25
+operator
